@@ -1,47 +1,45 @@
-# Personal Expense Management
+# 🌸 Personal Expense Management
 
-A Kotlin + Jetpack Compose Android app to record, organize, and analyze personal spending.
+A premium, modern Android application built with **Kotlin** and **Jetpack Compose** designed for effortless and stylish spending tracking.
 
-## Features
+![App Logo](docs/assets/logo.png)
 
-- Add expenses with title, amount, category, date, and optional description
-- View and delete expenses in a list
-- Filter expenses by category (`All`, `Food`, `Transport`, etc.)
-- Dashboard with total spending and transaction count
-- Statistics screen with category breakdown and percentages
-- Monthly budget control with warnings:
-  - Near limit (>= 80%)
-  - Exceeded limit (> 100%)
+## ✨ Premium Design Aesthetic
+This app features a custom-crafted **Pink Vibe** design system, tailored for a high-end, elegant user experience:
+- **Harmonious Palette**: A curated selection of Hot Pink, Misty Rose, and Lavender Blush tones.
+- **Modern Typography**: Bold, readable fonts that emphasize important financial data.
+- **Premium Shapes**: Custom 32dp rounded corners for all cards and buttons to provide a soft, contemporary feel.
+- **Dynamic Gradients**: Rich vertical and horizontal gradients on key UI elements like the Total Spending dashboard and progress bars.
 
-## Project Structure
+## 🚀 Key Features
+- **Smart Dashboard**: Instant overview of total spending with transaction counts.
+- **Effortless Logging**: Add expenses with titles, categories, and descriptions in a clean, intuitive form.
+- **Financial History**: A beautiful list view of all transactions with quick-delete functionality.
+- **Intelligent Budgeting**: Real-time monthly budget monitoring with visual warnings:
+  - 💖 **Healthy**: Budget is well within limits.
+  - ⚠️ **Near Limit**: Notifies you when you've reached 80% of your budget.
+  - 🚨 **Exceeded**: Clear warnings if you spend beyond your set limit.
+- **Category Analytics**: Detailed breakdown of spending by category with animated-style progress bars.
 
-- `app/src/main/java/com/ramzi/personalexpensemanagment/data`
-  - `Expense.kt` (Room entity)
-  - `ExpenseDao.kt` (DAO queries)
-  - `ExpenseDatabase.kt` (Room database)
-  - `ExpenseRepository.kt` (data abstraction)
-- `app/src/main/java/com/ramzi/personalexpensemanagment/ui/viewmodel`
-  - `ExpenseViewModel.kt` (state, filtering, totals, budget logic)
-- `app/src/main/java/com/ramzi/personalexpensemanagment/ui/screens`
-  - `HomeScreen.kt`
-  - `AddExpenseScreen.kt`
-  - `ExpenseListScreen.kt`
-  - `StatsScreen.kt`
-- `app/src/main/java/com/ramzi/personalexpensemanagment/ui/navigation`
-  - `AppNavigation.kt`
-  - `Screen.kt`
+## 🛠️ Tech Stack & Architecture
+This project follows the **Clean Architecture** principles and the **MVVM** (Model-View-ViewModel) pattern:
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose (Declarative UI)
+- **Local Database**: Room (SQLite abstraction for persistent storage)
+- **Navigation**: Jetpack Compose Navigation
+- **State Management**: Kotlin Flow & StateFlow (Reactive UI updates)
 
-## Build and Test
+## 📁 Project Structure
+- `data/`: Room entities, DAO interfaces, and the Repository pattern.
+- `ui/viewmodel/`: Core business logic, spending calculations, and budget state management.
+- `ui/screens/`: Composable screens for Home, Add Expense, List, and Stats.
+- `ui/theme/`: Custom Design System including Colors, Typography, and Shapes.
 
-Use PowerShell from the project root:
-
+## 💻 Installation & Build
+To build the project from the root directory:
 ```powershell
-.\gradlew.bat :app:assembleDebug
-.\gradlew.bat :app:testDebugUnitTest
+.\gradlew.bat installDebug
 ```
 
-## Notes
-
-- Data is stored locally using Room.
-- Default monthly budget is `10,000 DA` and can be changed from the Statistics screen.
-- Room version is managed via `gradle/libs.versions.toml`.
+---
+*Designed with 💖 for style and financial clarity.*
